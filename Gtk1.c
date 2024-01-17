@@ -1,5 +1,7 @@
-#include </gtk/gtk.h>
+#include <gtk-3.0/gtk/gtk.h>
 int main(int argc,char ** argv){
+    g_setenv("GDK_BACKEND","wayland",TRUE);
+    setenv("WAYLAND_DISPLAY","wayland-1",1);
     gtk_init(&argc,&argv);
     GtkWidget *window  = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 
